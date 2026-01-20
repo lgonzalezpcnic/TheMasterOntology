@@ -1,0 +1,726 @@
+<http://example.org/def/base#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://example.org/def/base#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0> .
+<http://example.org/def/base#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms
+<http://purl.org/dc/terms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://data.europa.eu/snb/model/elm/hasPart
+<http://data.europa.eu/snb/model/elm/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/snb/model/elm/hasPart> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/def/base#isPartOf> .
+<http://data.europa.eu/snb/model/elm/hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.europa.eu/snb/model/elm/hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://data.europa.eu/snb/model/elm/hasPart> <http://www.w3.org/2000/01/rdf-schema#comment> "An association property, that defines a part/whole relationship between instances of the same class. A related resource that is included either physically or logically in the described resource." .
+<http://data.europa.eu/snb/model/elm/hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "has part" .
+# 
+# http://example.org/def/base#covers
+<http://example.org/def/base#covers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#covers> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/def/base#isCoveredBy> .
+<http://example.org/def/base#covers> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Subject> .
+<http://example.org/def/base#covers> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/def/base#LearningAchievement> .
+<http://example.org/def/base#covers> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property that" .
+<http://example.org/def/base#covers> <http://www.w3.org/2000/01/rdf-schema#label> "covers" .
+# 
+# http://example.org/def/base#entryRequirement
+<http://example.org/def/base#entryRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#entryRequirement> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/def/base#isRequiredBy> .
+<http://example.org/def/base#entryRequirement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Program> .
+<http://example.org/def/base#entryRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#LearningEntitlement> .
+<http://example.org/def/base#entryRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Specific entry requirement or prerequisite of individuals which this learning entitlement is dessigned to start this learning" .
+<http://example.org/def/base#entryRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "entry requirement" .
+# 
+# http://example.org/def/base#evaluates
+<http://example.org/def/base#evaluates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#evaluates> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/def/base#isEvaluatedBy> .
+<http://example.org/def/base#evaluates> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#LearningAssessment> .
+<http://example.org/def/base#evaluates> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Subject> .
+<http://example.org/def/base#evaluates> <http://www.w3.org/2000/01/rdf-schema#comment> "The inverse property of is evaluated by" .
+<http://example.org/def/base#evaluates> <http://www.w3.org/2000/01/rdf-schema#label> "evaluates" .
+# 
+# http://example.org/def/base#hasAgreementWith
+<http://example.org/def/base#hasAgreementWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#hasAgreementWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://example.org/def/base#hasAgreementWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Organization> .
+<http://example.org/def/base#hasAgreementWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Organization> .
+<http://example.org/def/base#hasAgreementWith> <http://www.w3.org/2000/01/rdf-schema#comment> "All agreements in this ontology are modeled as mutual between the involved parties." .
+<http://example.org/def/base#hasAgreementWith> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property describring the relationship between educational institutions or organizations for joint programs, credit transfer (articulation), research, student/faculty exchange, or shared curriculum, ensuring clear understanding for collaboration, like guaranteeing transfer credits for students" .
+<http://example.org/def/base#hasAgreementWith> <http://www.w3.org/2000/01/rdf-schema#label> "has agreement with" .
+# 
+# http://example.org/def/base#hasBiggerPart
+<http://example.org/def/base#hasBiggerPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#hasBiggerPart> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/def/base#isSubpartOf> .
+<http://example.org/def/base#hasBiggerPart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://example.org/def/base#hasBiggerPart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://example.org/def/base#hasBiggerPart> <http://www.w3.org/2000/01/rdf-schema#comment> "The inversy property of is subpart of" .
+<http://example.org/def/base#hasBiggerPart> <http://www.w3.org/2000/01/rdf-schema#label> "has bigger part" .
+# 
+# http://example.org/def/base#hasMember
+<http://example.org/def/base#hasMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#hasMember> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/def/base#isMemberOf> .
+<http://example.org/def/base#hasMember> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Organization> .
+<http://example.org/def/base#hasMember> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/def/base#Person> .
+<http://example.org/def/base#hasMember> <http://www.w3.org/2000/01/rdf-schema#comment> "the inverse property of is memeber of" .
+<http://example.org/def/base#hasMember> <http://www.w3.org/2000/01/rdf-schema#label> "has member" .
+# 
+# http://example.org/def/base#hasMode
+<http://example.org/def/base#hasMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#hasMode> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/def/base#isModalityOf> .
+<http://example.org/def/base#hasMode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Subject> .
+<http://example.org/def/base#hasMode> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#DeliveryMode> .
+<http://example.org/def/base#hasMode> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property defining how something is done" .
+<http://example.org/def/base#hasMode> <http://www.w3.org/2000/01/rdf-schema#label> "has mode" .
+# 
+# http://example.org/def/base#hasParticipant
+<http://example.org/def/base#hasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#hasParticipant> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/def/base#participatesIn> .
+<http://example.org/def/base#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Program> .
+<http://example.org/def/base#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#External> .
+<http://example.org/def/base#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#comment> "The inverse property of participates in" .
+<http://example.org/def/base#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#label> "has participant" .
+# 
+# http://example.org/def/base#hasRole
+<http://example.org/def/base#hasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#hasRole> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/def/base#isRoleOf> .
+<http://example.org/def/base#hasRole> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/def/base#Person> .
+<http://example.org/def/base#hasRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Role> .
+<http://example.org/def/base#hasRole> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property that indicates someone has a function" .
+<http://example.org/def/base#hasRole> <http://www.w3.org/2000/01/rdf-schema#label> "has role" .
+# 
+# http://example.org/def/base#hasStudent
+<http://example.org/def/base#hasStudent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#hasStudent> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/def/base#isEnrolledIn> .
+<http://example.org/def/base#hasStudent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#KnowledgeGrouping> .
+<http://example.org/def/base#hasStudent> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Student> .
+<http://example.org/def/base#hasStudent> <http://www.w3.org/2000/01/rdf-schema#comment> "The inverse property of is enrolled in" .
+<http://example.org/def/base#hasStudent> <http://www.w3.org/2000/01/rdf-schema#label> "has student" .
+# 
+# http://example.org/def/base#isCoveredBy
+<http://example.org/def/base#isCoveredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#isCoveredBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/def/base#LearningAchievement> .
+<http://example.org/def/base#isCoveredBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Subject> .
+<http://example.org/def/base#isCoveredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The inverse property of covers" .
+<http://example.org/def/base#isCoveredBy> <http://www.w3.org/2000/01/rdf-schema#label> "is covered by" .
+# 
+# http://example.org/def/base#isEnrolledIn
+<http://example.org/def/base#isEnrolledIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#isEnrolledIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Student> .
+<http://example.org/def/base#isEnrolledIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#KnowledgeGrouping> .
+<http://example.org/def/base#isEnrolledIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An oBject property that indicates a student is enrolled in a Knowledge Grouping" .
+<http://example.org/def/base#isEnrolledIn> <http://www.w3.org/2000/01/rdf-schema#label> "is enrolled in" .
+# 
+# http://example.org/def/base#isEvaluatedBy
+<http://example.org/def/base#isEvaluatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#isEvaluatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Subject> .
+<http://example.org/def/base#isEvaluatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#LearningAssessment> .
+<http://example.org/def/base#isEvaluatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property that indicates how a subject is evaluated" .
+<http://example.org/def/base#isEvaluatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is evaluated by" .
+# 
+# http://example.org/def/base#isMemberOf
+<http://example.org/def/base#isMemberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#isMemberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/def/base#Person> .
+<http://example.org/def/base#isMemberOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Organization> .
+<http://example.org/def/base#isMemberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property that says someone belongs to a project, group or Organization" .
+<http://example.org/def/base#isMemberOf> <http://www.w3.org/2000/01/rdf-schema#label> "is member of" .
+# 
+# http://example.org/def/base#isModalityOf
+<http://example.org/def/base#isModalityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#isModalityOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#DeliveryMode> .
+<http://example.org/def/base#isModalityOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Subject> .
+<http://example.org/def/base#isModalityOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The inverse property of has mode" .
+<http://example.org/def/base#isModalityOf> <http://www.w3.org/2000/01/rdf-schema#label> "is modality of" .
+# 
+# http://example.org/def/base#isOfferedBy
+<http://example.org/def/base#isOfferedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#isOfferedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/def/base#offers> .
+<http://example.org/def/base#isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Program> .
+<http://example.org/def/base#isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Internal> .
+<http://example.org/def/base#isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The inverse property of offers" .
+<http://example.org/def/base#isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is offered by" .
+# 
+# http://example.org/def/base#isPartOf
+<http://example.org/def/base#isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#isPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://example.org/def/base#isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://example.org/def/base#isPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of has part" .
+<http://example.org/def/base#isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is part of" .
+# 
+# http://example.org/def/base#isRequiredBy
+<http://example.org/def/base#isRequiredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#isRequiredBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#LearningEntitlement> .
+<http://example.org/def/base#isRequiredBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Program> .
+<http://example.org/def/base#isRequiredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The inverse property of entry requirement" .
+<http://example.org/def/base#isRequiredBy> <http://www.w3.org/2000/01/rdf-schema#label> "is required by" .
+# 
+# http://example.org/def/base#isResponabilityOf
+<http://example.org/def/base#isResponabilityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#isResponabilityOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/def/base#isResponsibleFor> .
+<http://example.org/def/base#isResponabilityOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Coordinator> .
+<http://example.org/def/base#isResponabilityOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#KnowledgeGrouping> .
+<http://example.org/def/base#isResponabilityOf> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property that sais someone o something is responsibility of someone or something" .
+<http://example.org/def/base#isResponabilityOf> <http://www.w3.org/2000/01/rdf-schema#label> "is responability of" .
+# 
+# http://example.org/def/base#isResponsibleFor
+<http://example.org/def/base#isResponsibleFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#isResponsibleFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#KnowledgeGrouping> .
+<http://example.org/def/base#isResponsibleFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Coordinator> .
+<http://example.org/def/base#isResponsibleFor> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property that sais someone o something is responsible for someone or something" .
+<http://example.org/def/base#isResponsibleFor> <http://www.w3.org/2000/01/rdf-schema#label> "is responsible for" .
+# 
+# http://example.org/def/base#isRoleOf
+<http://example.org/def/base#isRoleOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#isRoleOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Role> .
+<http://example.org/def/base#isRoleOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/def/base#Person> .
+<http://example.org/def/base#isRoleOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The inverse property of has role" .
+<http://example.org/def/base#isRoleOf> <http://www.w3.org/2000/01/rdf-schema#label> "is role of" .
+# 
+# http://example.org/def/base#isSubpartOf
+<http://example.org/def/base#isSubpartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#isSubpartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://example.org/def/base#isSubpartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://example.org/def/base#isSubpartOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://example.org/def/base#isSubpartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A \"part of\" property but between academic entities" .
+<http://example.org/def/base#isSubpartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is subpart of" .
+# 
+# http://example.org/def/base#isTaughtBy
+<http://example.org/def/base#isTaughtBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#isTaughtBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/def/base#teaches> .
+<http://example.org/def/base#isTaughtBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Subject> .
+<http://example.org/def/base#isTaughtBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Professor> .
+<http://example.org/def/base#isTaughtBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The inverse property of teaches" .
+<http://example.org/def/base#isTaughtBy> <http://www.w3.org/2000/01/rdf-schema#label> "is taught by" .
+# 
+# http://example.org/def/base#isWorkplaceOf
+<http://example.org/def/base#isWorkplaceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#isWorkplaceOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/def/base#roleAt> .
+<http://example.org/def/base#isWorkplaceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://example.org/def/base#isWorkplaceOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://example.org/def/base#isWorkplaceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The inverse property of role at" .
+<http://example.org/def/base#isWorkplaceOf> <http://www.w3.org/2000/01/rdf-schema#label> "is workplace of" .
+# 
+# http://example.org/def/base#offers
+<http://example.org/def/base#offers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#offers> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Internal> .
+<http://example.org/def/base#offers> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Program> .
+<http://example.org/def/base#offers> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property describes the relation between an Internal Organization and a Program (Master´s Degree)" .
+<http://example.org/def/base#offers> <http://www.w3.org/2000/01/rdf-schema#label> "offers" .
+# 
+# http://example.org/def/base#participatesIn
+<http://example.org/def/base#participatesIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#participatesIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#External> .
+<http://example.org/def/base#participatesIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Program> .
+<http://example.org/def/base#participatesIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property that indicates someone is participating in a project, program, group..." .
+<http://example.org/def/base#participatesIn> <http://www.w3.org/2000/01/rdf-schema#label> "participates in" .
+# 
+# http://example.org/def/base#roleAt
+<http://example.org/def/base#roleAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#roleAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://example.org/def/base#roleAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://example.org/def/base#roleAt> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property that indicates someone has a function in a group, project, entity or Organization" .
+<http://example.org/def/base#roleAt> <http://www.w3.org/2000/01/rdf-schema#label> "role at" .
+# 
+# http://example.org/def/base#teaches
+<http://example.org/def/base#teaches> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/def/base#teaches> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Professor> .
+<http://example.org/def/base#teaches> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Subject> .
+<http://example.org/def/base#teaches> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property that indicates that someone teaches a subject" .
+<http://example.org/def/base#teaches> <http://www.w3.org/2000/01/rdf-schema#label> "teaches" .
+# 
+# http://purl.org/cerif/frapo/employs
+<http://purl.org/cerif/frapo/employs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/cerif/frapo/employs> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/cerif/frapo/isEmployedBy> .
+<http://purl.org/cerif/frapo/employs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Organization> .
+<http://purl.org/cerif/frapo/employs> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/def/base#Person> .
+<http://purl.org/cerif/frapo/employs> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property relating an employing agent to an employed agent, for example a person or an organization, who is typically employed to undertaking specified work in exchange for payment." .
+<http://purl.org/cerif/frapo/employs> <http://www.w3.org/2000/01/rdf-schema#label> "employs" .
+# 
+# http://purl.org/cerif/frapo/isEmployedBy
+<http://purl.org/cerif/frapo/isEmployedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/cerif/frapo/isEmployedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/def/base#Person> .
+<http://purl.org/cerif/frapo/isEmployedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/def/base#Organization> .
+<http://purl.org/cerif/frapo/isEmployedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property relating an employed agent, typically a person or an organization, to an employing agent." .
+<http://purl.org/cerif/frapo/isEmployedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is employed by" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://data.europa.eu/snb/model/elm/workload
+<http://data.europa.eu/snb/model/elm/workload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/snb/model/elm/workload> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/http./example.org/def/base#LearningActivity> .
+<http://data.europa.eu/snb/model/elm/workload> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.europa.eu/snb/model/elm/workload> <http://www.w3.org/2000/01/rdf-schema#comment> "The actual workload in number of hours the learner has spent engaged in the activity. This would include the number of hours in class, in group work, in practicals, as well as hours engaged in self-motivated study." .
+<http://data.europa.eu/snb/model/elm/workload> <http://www.w3.org/2000/01/rdf-schema#label> "workload" .
+# 
+# http://example.org/def/base#adress
+<http://example.org/def/base#adress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#adress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#AcademicEntity> .
+<http://example.org/def/base#adress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/def/base#adress> <http://www.w3.org/2000/01/rdf-schema#comment> "A date property defining the adress of a place" .
+<http://example.org/def/base#adress> <http://www.w3.org/2000/01/rdf-schema#label> "adress" .
+# 
+# http://example.org/def/base#credits
+<http://example.org/def/base#credits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#credits> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#KnowledgeGrouping> .
+<http://example.org/def/base#credits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/def/base#credits> <http://www.w3.org/2000/01/rdf-schema#comment> "A date property defining the number of credits of a Knowledge Grouping" .
+<http://example.org/def/base#credits> <http://www.w3.org/2000/01/rdf-schema#label> "credits" .
+# 
+# http://example.org/def/base#endDate
+<http://example.org/def/base#endDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#endDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Role> .
+<http://example.org/def/base#endDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://example.org/def/base#endDate> <http://www.w3.org/2000/01/rdf-schema#comment> "A data property defining a end date" .
+<http://example.org/def/base#endDate> <http://www.w3.org/2000/01/rdf-schema#label> "end date" .
+# 
+# http://example.org/def/base#maxScore
+<http://example.org/def/base#maxScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#maxScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#LearningAssessment> .
+<http://example.org/def/base#maxScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/def/base#maxScore> <http://www.w3.org/2000/01/rdf-schema#comment> "A data property defining the weight of a Learning Assesment" .
+<http://example.org/def/base#maxScore> <http://www.w3.org/2000/01/rdf-schema#label> "max score" .
+# 
+# http://example.org/def/base#startDate
+<http://example.org/def/base#startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#startDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Role> .
+<http://example.org/def/base#startDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://example.org/def/base#startDate> <http://www.w3.org/2000/01/rdf-schema#comment> "A data property defining a start date" .
+<http://example.org/def/base#startDate> <http://www.w3.org/2000/01/rdf-schema#label> "start date" .
+# 
+# http://example.org/def/base#submissionDate
+<http://example.org/def/base#submissionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/def/base#submissionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#LearningAssessment> .
+<http://example.org/def/base#submissionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://example.org/def/base#submissionDate> <http://www.w3.org/2000/01/rdf-schema#comment> "A data property defining a submission date of a Learning Assesment" .
+<http://example.org/def/base#submissionDate> <http://www.w3.org/2000/01/rdf-schema#label> "submission date" .
+# 
+# http://purl.org/cerif/frapo/hasCode
+<http://purl.org/cerif/frapo/hasCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/cerif/frapo/hasCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/def/base#Subject> .
+<http://purl.org/cerif/frapo/hasCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/cerif/frapo/hasCode> <http://www.w3.org/2000/01/rdf-schema#comment> "A data property defining a code" .
+<http://purl.org/cerif/frapo/hasCode> <http://www.w3.org/2000/01/rdf-schema#label> "has code" .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#comment> "A word or set of words by which a person or thing is known, addressed, or referred to." .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://data.europa.eu/snb/model/elm/LearningAchievement
+<http://data.europa.eu/snb/model/elm/LearningAchievement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/snb/model/elm/LearningAchievement> <http://www.w3.org/2002/07/owl#equivalentClass> <https://example.org/def/base#LearningAchievement> .
+<http://data.europa.eu/snb/model/elm/LearningAchievement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/snb/model/elm/> .
+<http://data.europa.eu/snb/model/elm/LearningAchievement> <http://www.w3.org/2000/01/rdf-schema#label> "Learning Achievement" .
+# 
+# http://data.europa.eu/snb/model/elm/LearningActivity
+<http://data.europa.eu/snb/model/elm/LearningActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/snb/model/elm/LearningActivity> <http://www.w3.org/2002/07/owl#equivalentClass> <http://example.org/def/http./example.org/def/base#LearningActivity> .
+<http://data.europa.eu/snb/model/elm/LearningActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/snb/model/elm/> .
+<http://data.europa.eu/snb/model/elm/LearningActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Learning Activity" .
+# 
+# http://data.europa.eu/snb/model/elm/LearningAssessment
+<http://data.europa.eu/snb/model/elm/LearningAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/snb/model/elm/LearningAssessment> <http://www.w3.org/2002/07/owl#equivalentClass> <http://example.org/def/base#LearningAssessment> .
+<http://data.europa.eu/snb/model/elm/LearningAssessment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/snb/model/elm/> .
+<http://data.europa.eu/snb/model/elm/LearningAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "Learning Assessment" .
+# 
+# http://data.europa.eu/snb/model/elm/LearningEntitlement
+<http://data.europa.eu/snb/model/elm/LearningEntitlement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/snb/model/elm/LearningEntitlement> <http://www.w3.org/2002/07/owl#equivalentClass> <http://example.org/def/base#LearningEntitlement> .
+<http://data.europa.eu/snb/model/elm/LearningEntitlement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/snb/model/elm/> .
+<http://data.europa.eu/snb/model/elm/LearningEntitlement> <http://www.w3.org/2000/01/rdf-schema#label> "Learning Entitlement" .
+# 
+# http://example.org/def/base#AcademicEntity
+<http://example.org/def/base#AcademicEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#AcademicEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of people that shares functions related to the Academic world" .
+<http://example.org/def/base#AcademicEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Academic Entity" .
+# 
+# http://example.org/def/base#AcademicRole
+<http://example.org/def/base#AcademicRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#AcademicRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#Role> .
+<http://example.org/def/base#AcademicRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#AcademicEntity> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#roleAt> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#AcademicRole> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of role that is related to the Master´s Degree" .
+<http://example.org/def/base#AcademicRole> <http://www.w3.org/2000/01/rdf-schema#label> "Academic Role" .
+# 
+# http://example.org/def/base#Assesment
+<http://example.org/def/base#Assesment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Assesment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#LearningAssessment> .
+<http://example.org/def/base#Assesment> <http://www.w3.org/2000/01/rdf-schema#comment> "A way to evaluate a student about the contents of a subject" .
+<http://example.org/def/base#Assesment> <http://www.w3.org/2000/01/rdf-schema#label> "Assesment" .
+# 
+# http://example.org/def/base#Compulsory
+<http://example.org/def/base#Compulsory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Compulsory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#DeliveryMode> .
+<http://example.org/def/base#Compulsory> <http://www.w3.org/2002/07/owl#disjointWith> <http://example.org/def/base#Optional> .
+<http://example.org/def/base#Compulsory> <http://www.w3.org/2000/01/rdf-schema#comment> "A Delivery Mode that says that a student needs to be enrolled in the subject. " .
+<http://example.org/def/base#Compulsory> <http://www.w3.org/2000/01/rdf-schema#label> "Compulsory" .
+# 
+# http://example.org/def/base#Coordinator
+<http://example.org/def/base#Coordinator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Coordinator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#AcademicRole> .
+<http://example.org/def/base#Coordinator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#AcademicEntity> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#isResponsibleFor> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Coordinator> <http://www.w3.org/2002/07/owl#disjointWith> <http://example.org/def/base#Student> .
+<http://example.org/def/base#Coordinator> <http://www.w3.org/2000/01/rdf-schema#comment> "An Academic role that is responsible of a KnowledgeGrouping" .
+<http://example.org/def/base#Coordinator> <http://www.w3.org/2000/01/rdf-schema#label> "Coordinator" .
+# 
+# http://example.org/def/base#Course
+<http://example.org/def/base#Course> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Course> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#KnowledgeGrouping> .
+<http://example.org/def/base#Course> <http://www.w3.org/2000/01/rdf-schema#comment> "A knowledge group that includes what is learn in a course (2024-2025)" .
+<http://example.org/def/base#Course> <http://www.w3.org/2000/01/rdf-schema#label> "Course" .
+# 
+# http://example.org/def/base#DeliveryMode
+<http://example.org/def/base#DeliveryMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#DeliveryMode> <http://www.w3.org/2000/01/rdf-schema#comment> "The mode in what a subject is delivered" .
+<http://example.org/def/base#DeliveryMode> <http://www.w3.org/2000/01/rdf-schema#label> "Delivery Mode" .
+# 
+# http://example.org/def/base#Department
+<http://example.org/def/base#Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Department> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/cerif/frapo/Department> .
+<http://example.org/def/base#Department> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#AcademicEntity> .
+<http://example.org/def/base#Department> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/cerif/frapo/Faculty> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#isSubpartOf> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Department> <http://www.w3.org/2000/01/rdf-schema#comment> "A department or sub-section within a larger organization, for example a university academic department." .
+<http://example.org/def/base#Department> <http://www.w3.org/2000/01/rdf-schema#label> "Department" .
+# 
+# http://example.org/def/base#Enterprise
+<http://example.org/def/base#Enterprise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Enterprise> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#External> .
+<http://example.org/def/base#Enterprise> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass External Organization that is private" .
+<http://example.org/def/base#Enterprise> <http://www.w3.org/2000/01/rdf-schema#label> "Enterprise" .
+# 
+# http://example.org/def/base#Exam
+<http://example.org/def/base#Exam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Exam> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#LearningAssessment> .
+<http://example.org/def/base#Exam> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of assesment" .
+<http://example.org/def/base#Exam> <http://www.w3.org/2000/01/rdf-schema#label> "Exam" .
+# 
+# http://example.org/def/base#External
+<http://example.org/def/base#External> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#External> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#Organization> .
+<http://example.org/def/base#External> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#Program> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#participatesIn> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#External> <http://www.w3.org/2000/01/rdf-schema#comment> "A Organization that is not directly responsible of a Master´s Degree but collaborates." .
+<http://example.org/def/base#External> <http://www.w3.org/2000/01/rdf-schema#label> "External" .
+# 
+# http://example.org/def/base#Faculty
+<http://example.org/def/base#Faculty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Faculty> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/cerif/frapo/Faculty> .
+<http://example.org/def/base#Faculty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#AcademicEntity> .
+<http://example.org/def/base#Faculty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/cerif/frapo/University> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#isSubpartOf> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Faculty> <http://www.w3.org/2000/01/rdf-schema#comment> "A grouping of similar departments within a university context, also known as a school or a division, for example the Humanities Division, the Mathematics Faculty, or the School of Medicine." .
+<http://example.org/def/base#Faculty> <http://www.w3.org/2000/01/rdf-schema#label> "Faculty" .
+# 
+# http://example.org/def/base#Internal
+<http://example.org/def/base#Internal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Internal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#Organization> .
+<http://example.org/def/base#Internal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#Program> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#offers> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Internal> <http://www.w3.org/2000/01/rdf-schema#comment> "A Organization that is responsible of a Master´s Degree and offers it to students." .
+<http://example.org/def/base#Internal> <http://www.w3.org/2000/01/rdf-schema#label> "Internal" .
+# 
+# http://example.org/def/base#KnowledgeGrouping
+<http://example.org/def/base#KnowledgeGrouping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#KnowledgeGrouping> <http://www.w3.org/2000/01/rdf-schema#comment> "A KnowledgeGrouping may be contained by another KnowledgeGrouping or an organizationalUnit using knowledgeGrouping." .
+<http://example.org/def/base#KnowledgeGrouping> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge Grouping" .
+# 
+# http://example.org/def/base#Laboratory
+<http://example.org/def/base#Laboratory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Laboratory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/http./example.org/def/base#LearningActivity> .
+<http://example.org/def/base#Laboratory> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of Learning Activity" .
+<http://example.org/def/base#Laboratory> <http://www.w3.org/2000/01/rdf-schema#label> "Laboratory" .
+# 
+# http://example.org/def/base#LearningAssessment
+<http://example.org/def/base#LearningAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#LearningAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "The process of establishing the extent to which a learner has attained particular knowledge, skills and competences against criteria such as learning outcomes or standards of competence." .
+<http://example.org/def/base#LearningAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "Learning Assessment" .
+# 
+# http://example.org/def/base#LearningEntitlement
+<http://example.org/def/base#LearningEntitlement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#LearningEntitlement> <http://www.w3.org/2000/01/rdf-schema#comment> "A right, e.g., to practice a profession, take advantage of a learning opportunity or join an organisation, as a result of the acquisition of knowledge, skills, responsibility and/or autonomy." .
+<http://example.org/def/base#LearningEntitlement> <http://www.w3.org/2000/01/rdf-schema#label> "Learning Entitlement" .
+# 
+# http://example.org/def/base#Lecture
+<http://example.org/def/base#Lecture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Lecture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/http./example.org/def/base#LearningActivity> .
+<http://example.org/def/base#Lecture> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of Learning Activity" .
+<http://example.org/def/base#Lecture> <http://www.w3.org/2000/01/rdf-schema#label> "Lecture" .
+# 
+# http://example.org/def/base#OnCampus
+<http://example.org/def/base#OnCampus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#OnCampus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#DeliveryMode> .
+<http://example.org/def/base#OnCampus> <http://www.w3.org/2000/01/rdf-schema#comment> "A presencial delivery mode of a subject" .
+<http://example.org/def/base#OnCampus> <http://www.w3.org/2000/01/rdf-schema#label> "On- Campus" .
+# 
+# http://example.org/def/base#Online
+<http://example.org/def/base#Online> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Online> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#DeliveryMode> .
+<http://example.org/def/base#Online> <http://www.w3.org/2000/01/rdf-schema#comment> "A online delivery mode of a subject" .
+<http://example.org/def/base#Online> <http://www.w3.org/2000/01/rdf-schema#label> "Online" .
+# 
+# http://example.org/def/base#Optional
+<http://example.org/def/base#Optional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Optional> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#DeliveryMode> .
+<http://example.org/def/base#Optional> <http://www.w3.org/2000/01/rdf-schema#comment> "A kind of Delivery Mode that means that a subject is not compulsoty in the program" .
+<http://example.org/def/base#Optional> <http://www.w3.org/2000/01/rdf-schema#label> "Optional" .
+# 
+# http://example.org/def/base#Organization
+<http://example.org/def/base#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Organization> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Organization> .
+<http://example.org/def/base#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://example.org/def/base#Person> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hasMember> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://xmlns.com/foaf/0.1/name> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition of Organization" .
+<http://example.org/def/base#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
+# 
+# http://example.org/def/base#ProfessionalRole
+<http://example.org/def/base#ProfessionalRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#ProfessionalRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#Role> .
+<http://example.org/def/base#ProfessionalRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#Organization> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#roleAt> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#ProfessionalRole> <http://www.w3.org/2000/01/rdf-schema#comment> "A role not related to the Master´s Degree" .
+<http://example.org/def/base#ProfessionalRole> <http://www.w3.org/2000/01/rdf-schema#label> "Professional Role" .
+# 
+# http://example.org/def/base#Professor
+<http://example.org/def/base#Professor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Professor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#AcademicRole> .
+<http://example.org/def/base#Professor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#Subject> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#teaches> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Professor> <http://www.w3.org/2002/07/owl#disjointWith> <http://example.org/def/base#Student> .
+<http://example.org/def/base#Professor> <http://www.w3.org/2000/01/rdf-schema#comment> "An Academic role that teaches a subject" .
+<http://example.org/def/base#Professor> <http://www.w3.org/2000/01/rdf-schema#label> "Professor" .
+# 
+# http://example.org/def/base#Program
+<http://example.org/def/base#Program> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Program> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#KnowledgeGrouping> .
+<http://example.org/def/base#Program> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#LearningEntitlement> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#entryRequirement> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Program> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured, coordinated set of courses and activities leading to specific learning outcomes, often culminating in a degree" .
+<http://example.org/def/base#Program> <http://www.w3.org/2000/01/rdf-schema#label> "Program" .
+# 
+# http://example.org/def/base#ResearchGroup
+<http://example.org/def/base#ResearchGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#ResearchGroup> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/cerif/frapo/ResearchGroup> .
+<http://example.org/def/base#ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#AcademicEntity> .
+<http://example.org/def/base#ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#Department> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#isSubpartOf> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of people, usually within a university department or a research institute, and typically under a single group leader, dedicated to working together to undertake research on one or more topics. May also be called a research unit." .
+<http://example.org/def/base#ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Research Group" .
+# 
+# http://example.org/def/base#Role
+<http://example.org/def/base#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid13 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#startDate> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid14 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#endDate> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "The function a person does in a group, project or organization" .
+<http://example.org/def/base#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role" .
+# 
+# http://example.org/def/base#SelfStudy
+<http://example.org/def/base#SelfStudy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#SelfStudy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/http./example.org/def/base#LearningActivity> .
+<http://example.org/def/base#SelfStudy> <http://www.w3.org/2000/01/rdf-schema#comment> "A Learning Activity" .
+<http://example.org/def/base#SelfStudy> <http://www.w3.org/2000/01/rdf-schema#label> "Self-study" .
+# 
+# http://example.org/def/base#Student
+<http://example.org/def/base#Student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Student> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#AcademicRole> .
+<http://example.org/def/base#Student> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#KnowledgeGrouping> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#isEnrolledIn> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Student> <http://www.w3.org/2000/01/rdf-schema#comment> "A person that has an Academic Role and its enrolled in a Program" .
+<http://example.org/def/base#Student> <http://www.w3.org/2000/01/rdf-schema#label> "Student" .
+# 
+# http://example.org/def/base#Subject
+<http://example.org/def/base#Subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Subject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#KnowledgeGrouping> .
+<http://example.org/def/base#Subject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://example.org/def/base#LearningAchievement> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#covers> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Subject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#DeliveryMode> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hasMode> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Subject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#KnowledgeGrouping> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#isEvaluatedBy> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Subject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/http./example.org/def/base#LearningActivity> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#isEvaluatedBy> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Subject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid20 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#credits> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Subject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid21 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/cerif/frapo/hasCode> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/def/base#Subject> <http://www.w3.org/2000/01/rdf-schema#comment> "A Knowledge Grouping that groups a specific Learning Entitlement" .
+<http://example.org/def/base#Subject> <http://www.w3.org/2000/01/rdf-schema#label> "Subject" .
+# 
+# http://example.org/def/base#University
+<http://example.org/def/base#University> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#University> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/cerif/frapo/University> .
+<http://example.org/def/base#University> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#AcademicEntity> .
+<http://example.org/def/base#University> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#Internal> .
+<http://example.org/def/base#University> <http://www.w3.org/2000/01/rdf-schema#comment> "A university at which higher education and research is conducted." .
+<http://example.org/def/base#University> <http://www.w3.org/2000/01/rdf-schema#label> "University" .
+# 
+# http://example.org/def/base#Year
+<http://example.org/def/base#Year> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/base#Year> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#KnowledgeGrouping> .
+<http://example.org/def/base#Year> <http://www.w3.org/2000/01/rdf-schema#comment> "A knowledge group that includes what is learn in a year (first, second)" .
+<http://example.org/def/base#Year> <http://www.w3.org/2000/01/rdf-schema#label> "Year" .
+# 
+# http://example.org/def/http./example.org/def/base#LearningActivity
+<http://example.org/def/http./example.org/def/base#LearningActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/def/http./example.org/def/base#LearningActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Any action, in process or completed, which may lead to the acquisition of knowledge, skills or responsibility and autonomy." .
+<http://example.org/def/http./example.org/def/base#LearningActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Learning Activity" .
+# 
+# http://purl.org/cerif/frapo/Department
+<http://purl.org/cerif/frapo/Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/cerif/frapo/Department> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
+<http://purl.org/cerif/frapo/Department> <http://www.w3.org/2000/01/rdf-schema#label> "Department" .
+# 
+# http://purl.org/cerif/frapo/Faculty
+<http://purl.org/cerif/frapo/Faculty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/cerif/frapo/Faculty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/Faculty> <http://www.w3.org/2000/01/rdf-schema#label> "Faculty" .
+# 
+# http://purl.org/cerif/frapo/ResearchGroup
+<http://purl.org/cerif/frapo/ResearchGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/cerif/frapo/ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Research Group" .
+# 
+# http://purl.org/cerif/frapo/ResearchInstitute
+<http://purl.org/cerif/frapo/ResearchInstitute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/cerif/frapo/ResearchInstitute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/def/base#External> .
+<http://purl.org/cerif/frapo/ResearchInstitute> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization primarily dedicated to undertaking research, that might be part of a university or of a commercial company, or might be independently funded by a research funding agency." .
+<http://purl.org/cerif/frapo/ResearchInstitute> <http://www.w3.org/2000/01/rdf-schema#label> "Research Institute" .
+# 
+# http://purl.org/cerif/frapo/University
+<http://purl.org/cerif/frapo/University> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/cerif/frapo/University> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/University> <http://www.w3.org/2000/01/rdf-schema#label> "University" .
+# 
+# http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http:/xmlns.com/foaf/0.1> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2002/07/owl#equivalentClass> <https://example.org/def/base#Person> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http:/xmlns.com/foaf/0.1> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+# 
+# https://example.org/def/base#LearningAchievement
+<https://example.org/def/base#LearningAchievement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/def/base#LearningAchievement> <http://www.w3.org/2000/01/rdf-schema#comment> "The acquisition of a set of knowledge and/or skills used with responsibility and autonomy." .
+<https://example.org/def/base#LearningAchievement> <http://www.w3.org/2000/01/rdf-schema#label> "Learning Achievement" .
+# 
+# https://example.org/def/base#Person
+<https://example.org/def/base#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/def/base#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#Role> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#hasRole> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://example.org/def/base#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#Organization> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/def/base#isMemberOf> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://example.org/def/base#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/def/base#Organization> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/cerif/frapo/isEmployedBy> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://example.org/def/base#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid25 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://xmlns.com/foaf/0.1/name> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://example.org/def/base#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A human being regarded as an individual." .
+<https://example.org/def/base#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
