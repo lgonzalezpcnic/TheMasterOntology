@@ -1,0 +1,1158 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/def/base#"
+     xml:base="http://example.org/def/base"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dc1="http://purl.org/dc/"
+     xmlns:mod="https://w3id.org/mod#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://example.org/def/base#">
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0"/>
+        <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- https://w3id.org/mod#createdWith -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#createdWith"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.europa.eu/snb/model/elm/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://data.europa.eu/snb/model/elm/hasPart">
+        <owl:inverseOf rdf:resource="http://example.org/def/base#isPartOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>An association property, that defines a part/whole relationship between instances of the same class. A related resource that is included either physically or logically in the described resource.</rdfs:comment>
+        <rdfs:label>has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#covers -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#covers">
+        <owl:inverseOf rdf:resource="http://example.org/def/base#isCoveredBy"/>
+        <rdfs:domain rdf:resource="http://example.org/def/base#Subject"/>
+        <rdfs:range rdf:resource="https://example.org/def/base#LearningAchievement"/>
+        <rdfs:comment>An object property that</rdfs:comment>
+        <rdfs:label>covers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#entryRequirement -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#entryRequirement">
+        <owl:inverseOf rdf:resource="http://example.org/def/base#isRequiredBy"/>
+        <rdfs:domain rdf:resource="http://example.org/def/base#Program"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#LearningEntitlement"/>
+        <rdfs:comment>Specific entry requirement or prerequisite of individuals which this learning entitlement is dessigned to start this learning</rdfs:comment>
+        <rdfs:label>entry requirement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#evaluates -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#evaluates">
+        <owl:inverseOf rdf:resource="http://example.org/def/base#isEvaluatedBy"/>
+        <rdfs:domain rdf:resource="http://example.org/def/base#LearningAssessment"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#Subject"/>
+        <rdfs:comment>The inverse property of is evaluated by</rdfs:comment>
+        <rdfs:label>evaluates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#hasAgreementWith -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#hasAgreementWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/def/base#Organization"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#Organization"/>
+        <rdfs:comment>All agreements in this ontology are modeled as mutual between the involved parties.</rdfs:comment>
+        <rdfs:comment>An object property describring the relationship between educational institutions or organizations for joint programs, credit transfer (articulation), research, student/faculty exchange, or shared curriculum, ensuring clear understanding for collaboration, like guaranteeing transfer credits for students</rdfs:comment>
+        <rdfs:label>has agreement with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#hasBiggerPart -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#hasBiggerPart">
+        <owl:inverseOf rdf:resource="http://example.org/def/base#isSubpartOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>The inversy property of is subpart of</rdfs:comment>
+        <rdfs:label>has bigger part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#hasMember">
+        <owl:inverseOf rdf:resource="http://example.org/def/base#isMemberOf"/>
+        <rdfs:domain rdf:resource="http://example.org/def/base#Organization"/>
+        <rdfs:range rdf:resource="https://example.org/def/base#Person"/>
+        <rdfs:comment>the inverse property of is memeber of</rdfs:comment>
+        <rdfs:label>has member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#hasMode -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#hasMode">
+        <owl:inverseOf rdf:resource="http://example.org/def/base#isModalityOf"/>
+        <rdfs:domain rdf:resource="http://example.org/def/base#Subject"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#DeliveryMode"/>
+        <rdfs:comment>An object property defining how something is done</rdfs:comment>
+        <rdfs:label>has mode</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#hasParticipant">
+        <owl:inverseOf rdf:resource="http://example.org/def/base#participatesIn"/>
+        <rdfs:domain rdf:resource="http://example.org/def/base#Program"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#External"/>
+        <rdfs:comment>The inverse property of participates in</rdfs:comment>
+        <rdfs:label>has participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#hasRole">
+        <owl:inverseOf rdf:resource="http://example.org/def/base#isRoleOf"/>
+        <rdfs:domain rdf:resource="https://example.org/def/base#Person"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#Role"/>
+        <rdfs:comment>An object property that indicates someone has a function</rdfs:comment>
+        <rdfs:label>has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#hasStudent -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#hasStudent">
+        <owl:inverseOf rdf:resource="http://example.org/def/base#isEnrolledIn"/>
+        <rdfs:domain rdf:resource="http://example.org/def/base#KnowledgeGrouping"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#Student"/>
+        <rdfs:comment>The inverse property of is enrolled in</rdfs:comment>
+        <rdfs:label>has student</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#isCoveredBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#isCoveredBy">
+        <rdfs:domain rdf:resource="https://example.org/def/base#LearningAchievement"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#Subject"/>
+        <rdfs:comment>The inverse property of covers</rdfs:comment>
+        <rdfs:label>is covered by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#isEnrolledIn -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#isEnrolledIn">
+        <rdfs:domain rdf:resource="http://example.org/def/base#Student"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#KnowledgeGrouping"/>
+        <rdfs:comment>An oBject property that indicates a student is enrolled in a Knowledge Grouping</rdfs:comment>
+        <rdfs:label>is enrolled in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#isEvaluatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#isEvaluatedBy">
+        <rdfs:domain rdf:resource="http://example.org/def/base#Subject"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#LearningAssessment"/>
+        <rdfs:comment>An object property that indicates how a subject is evaluated</rdfs:comment>
+        <rdfs:label>is evaluated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#isMemberOf">
+        <rdfs:domain rdf:resource="https://example.org/def/base#Person"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#Organization"/>
+        <rdfs:comment>An object property that says someone belongs to a project, group or Organization</rdfs:comment>
+        <rdfs:label>is member of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#isModalityOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#isModalityOf">
+        <rdfs:domain rdf:resource="http://example.org/def/base#DeliveryMode"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#Subject"/>
+        <rdfs:comment>The inverse property of has mode</rdfs:comment>
+        <rdfs:label>is modality of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#isOfferedBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#isOfferedBy">
+        <owl:inverseOf rdf:resource="http://example.org/def/base#offers"/>
+        <rdfs:domain rdf:resource="http://example.org/def/base#Program"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#Internal"/>
+        <rdfs:comment>The inverse property of offers</rdfs:comment>
+        <rdfs:label>is offered by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#isPartOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>Inverse of has part</rdfs:comment>
+        <rdfs:label>is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#isRequiredBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#isRequiredBy">
+        <rdfs:domain rdf:resource="http://example.org/def/base#LearningEntitlement"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#Program"/>
+        <rdfs:comment>The inverse property of entry requirement</rdfs:comment>
+        <rdfs:label>is required by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#isResponabilityOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#isResponabilityOf">
+        <owl:inverseOf rdf:resource="http://example.org/def/base#isResponsibleFor"/>
+        <rdfs:domain rdf:resource="http://example.org/def/base#Coordinator"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#KnowledgeGrouping"/>
+        <rdfs:comment>An object property that sais someone o something is responsibility of someone or something</rdfs:comment>
+        <rdfs:label>is responability of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#isResponsibleFor -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#isResponsibleFor">
+        <rdfs:domain rdf:resource="http://example.org/def/base#KnowledgeGrouping"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#Coordinator"/>
+        <rdfs:comment>An object property that sais someone o something is responsible for someone or something</rdfs:comment>
+        <rdfs:label>is responsible for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#isRoleOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#isRoleOf">
+        <rdfs:domain rdf:resource="http://example.org/def/base#Role"/>
+        <rdfs:range rdf:resource="https://example.org/def/base#Person"/>
+        <rdfs:comment>The inverse property of has role</rdfs:comment>
+        <rdfs:label>is role of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#isSubpartOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#isSubpartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>A &quot;part of&quot; property but between academic entities</rdfs:comment>
+        <rdfs:label>is subpart of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#isTaughtBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#isTaughtBy">
+        <owl:inverseOf rdf:resource="http://example.org/def/base#teaches"/>
+        <rdfs:domain rdf:resource="http://example.org/def/base#Subject"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#Professor"/>
+        <rdfs:comment>The inverse property of teaches</rdfs:comment>
+        <rdfs:label>is taught by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#isWorkplaceOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#isWorkplaceOf">
+        <owl:inverseOf rdf:resource="http://example.org/def/base#roleAt"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>The inverse property of role at</rdfs:comment>
+        <rdfs:label>is workplace of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#offers -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#offers">
+        <rdfs:domain rdf:resource="http://example.org/def/base#Internal"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#Program"/>
+        <rdfs:comment>An object property describes the relation between an Internal Organization and a Program (Master´s Degree)</rdfs:comment>
+        <rdfs:label>offers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#participatesIn -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#participatesIn">
+        <rdfs:domain rdf:resource="http://example.org/def/base#External"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#Program"/>
+        <rdfs:comment>An object property that indicates someone is participating in a project, program, group...</rdfs:comment>
+        <rdfs:label>participates in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#roleAt -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#roleAt">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>An object property that indicates someone has a function in a group, project, entity or Organization</rdfs:comment>
+        <rdfs:label>role at</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/def/base#teaches -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/def/base#teaches">
+        <rdfs:domain rdf:resource="http://example.org/def/base#Professor"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#Subject"/>
+        <rdfs:comment>An object property that indicates that someone teaches a subject</rdfs:comment>
+        <rdfs:label>teaches</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/cerif/frapo/employs -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/cerif/frapo/employs">
+        <owl:inverseOf rdf:resource="http://purl.org/cerif/frapo/isEmployedBy"/>
+        <rdfs:domain rdf:resource="http://example.org/def/base#Organization"/>
+        <rdfs:range rdf:resource="https://example.org/def/base#Person"/>
+        <rdfs:comment>An object property relating an employing agent to an employed agent, for example a person or an organization, who is typically employed to undertaking specified work in exchange for payment.</rdfs:comment>
+        <rdfs:label>employs</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/cerif/frapo/isEmployedBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/cerif/frapo/isEmployedBy">
+        <rdfs:domain rdf:resource="https://example.org/def/base#Person"/>
+        <rdfs:range rdf:resource="http://example.org/def/base#Organization"/>
+        <rdfs:comment>An object property relating an employed agent, typically a person or an organization, to an employing agent.</rdfs:comment>
+        <rdfs:label>is employed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.europa.eu/snb/model/elm/workload -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europa.eu/snb/model/elm/workload">
+        <rdfs:domain rdf:resource="http://example.org/def/http./example.org/def/base#LearningActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The actual workload in number of hours the learner has spent engaged in the activity. This would include the number of hours in class, in group work, in practicals, as well as hours engaged in self-motivated study.</rdfs:comment>
+        <rdfs:label>workload</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/def/base#adress -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/def/base#adress">
+        <rdfs:domain rdf:resource="http://example.org/def/base#AcademicEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A date property defining the adress of a place</rdfs:comment>
+        <rdfs:label>adress</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/def/base#credits -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/def/base#credits">
+        <rdfs:domain rdf:resource="http://example.org/def/base#KnowledgeGrouping"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>A date property defining the number of credits of a Knowledge Grouping</rdfs:comment>
+        <rdfs:label>credits</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/def/base#endDate -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/def/base#endDate">
+        <rdfs:domain rdf:resource="http://example.org/def/base#Role"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>A data property defining a end date</rdfs:comment>
+        <rdfs:label>end date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/def/base#maxScore -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/def/base#maxScore">
+        <rdfs:domain rdf:resource="http://example.org/def/base#LearningAssessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>A data property defining the weight of a Learning Assesment</rdfs:comment>
+        <rdfs:label>max score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/def/base#startDate -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/def/base#startDate">
+        <rdfs:domain rdf:resource="http://example.org/def/base#Role"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>A data property defining a start date</rdfs:comment>
+        <rdfs:label>start date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/def/base#submissionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/def/base#submissionDate">
+        <rdfs:domain rdf:resource="http://example.org/def/base#LearningAssessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>A data property defining a submission date of a Learning Assesment</rdfs:comment>
+        <rdfs:label>submission date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/cerif/frapo/hasCode -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/cerif/frapo/hasCode">
+        <rdfs:domain rdf:resource="http://example.org/def/base#Subject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A data property defining a code</rdfs:comment>
+        <rdfs:label>has code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A word or set of words by which a person or thing is known, addressed, or referred to.</rdfs:comment>
+        <rdfs:label>name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.europa.eu/snb/model/elm/LearningAchievement -->
+
+    <owl:Class rdf:about="http://data.europa.eu/snb/model/elm/LearningAchievement">
+        <owl:equivalentClass rdf:resource="https://example.org/def/base#LearningAchievement"/>
+        <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/snb/model/elm/"/>
+        <rdfs:label>Learning Achievement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europa.eu/snb/model/elm/LearningActivity -->
+
+    <owl:Class rdf:about="http://data.europa.eu/snb/model/elm/LearningActivity">
+        <owl:equivalentClass rdf:resource="http://example.org/def/http./example.org/def/base#LearningActivity"/>
+        <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/snb/model/elm/"/>
+        <rdfs:label>Learning Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europa.eu/snb/model/elm/LearningAssessment -->
+
+    <owl:Class rdf:about="http://data.europa.eu/snb/model/elm/LearningAssessment">
+        <owl:equivalentClass rdf:resource="http://example.org/def/base#LearningAssessment"/>
+        <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/snb/model/elm/"/>
+        <rdfs:label>Learning Assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europa.eu/snb/model/elm/LearningEntitlement -->
+
+    <owl:Class rdf:about="http://data.europa.eu/snb/model/elm/LearningEntitlement">
+        <owl:equivalentClass rdf:resource="http://example.org/def/base#LearningEntitlement"/>
+        <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/snb/model/elm/"/>
+        <rdfs:label>Learning Entitlement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#AcademicEntity -->
+
+    <owl:Class rdf:about="http://example.org/def/base#AcademicEntity">
+        <rdfs:comment>A group of people that shares functions related to the Academic world</rdfs:comment>
+        <rdfs:label>Academic Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#AcademicRole -->
+
+    <owl:Class rdf:about="http://example.org/def/base#AcademicRole">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#roleAt"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/def/base#AcademicEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A subclass of role that is related to the Master´s Degree</rdfs:comment>
+        <rdfs:label>Academic Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Assesment -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Assesment">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#LearningAssessment"/>
+        <rdfs:comment>A way to evaluate a student about the contents of a subject</rdfs:comment>
+        <rdfs:label>Assesment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Compulsory -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Compulsory">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#DeliveryMode"/>
+        <owl:disjointWith rdf:resource="http://example.org/def/base#Optional"/>
+        <rdfs:comment>A Delivery Mode that says that a student needs to be enrolled in the subject. </rdfs:comment>
+        <rdfs:label>Compulsory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Coordinator -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Coordinator">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#AcademicRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#isResponsibleFor"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/def/base#AcademicEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://example.org/def/base#Student"/>
+        <rdfs:comment>An Academic role that is responsible of a KnowledgeGrouping</rdfs:comment>
+        <rdfs:label>Coordinator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Course -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Course">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#KnowledgeGrouping"/>
+        <rdfs:comment>A knowledge group that includes what is learn in a course (2024-2025)</rdfs:comment>
+        <rdfs:label>Course</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#DeliveryMode -->
+
+    <owl:Class rdf:about="http://example.org/def/base#DeliveryMode">
+        <rdfs:comment>The mode in what a subject is delivered</rdfs:comment>
+        <rdfs:label>Delivery Mode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Department -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Department">
+        <owl:equivalentClass rdf:resource="http://purl.org/cerif/frapo/Department"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#AcademicEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#isSubpartOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/cerif/frapo/Faculty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A department or sub-section within a larger organization, for example a university academic department.</rdfs:comment>
+        <rdfs:label>Department</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Enterprise -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Enterprise">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#External"/>
+        <rdfs:comment>A subclass External Organization that is private</rdfs:comment>
+        <rdfs:label>Enterprise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Exam -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Exam">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#LearningAssessment"/>
+        <rdfs:comment>A type of assesment</rdfs:comment>
+        <rdfs:label>Exam</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#External -->
+
+    <owl:Class rdf:about="http://example.org/def/base#External">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#Organization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#participatesIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/def/base#Program"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Organization that is not directly responsible of a Master´s Degree but collaborates.</rdfs:comment>
+        <rdfs:label>External</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Faculty -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Faculty">
+        <owl:equivalentClass rdf:resource="http://purl.org/cerif/frapo/Faculty"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#AcademicEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#isSubpartOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/cerif/frapo/University"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A grouping of similar departments within a university context, also known as a school or a division, for example the Humanities Division, the Mathematics Faculty, or the School of Medicine.</rdfs:comment>
+        <rdfs:label>Faculty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Internal -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Internal">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#Organization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#offers"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/def/base#Program"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Organization that is responsible of a Master´s Degree and offers it to students.</rdfs:comment>
+        <rdfs:label>Internal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#KnowledgeGrouping -->
+
+    <owl:Class rdf:about="http://example.org/def/base#KnowledgeGrouping">
+        <rdfs:comment>A KnowledgeGrouping may be contained by another KnowledgeGrouping or an organizationalUnit using knowledgeGrouping.</rdfs:comment>
+        <rdfs:label>Knowledge Grouping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Laboratory -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Laboratory">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/http./example.org/def/base#LearningActivity"/>
+        <rdfs:comment>A subclass of Learning Activity</rdfs:comment>
+        <rdfs:label>Laboratory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#LearningAssessment -->
+
+    <owl:Class rdf:about="http://example.org/def/base#LearningAssessment">
+        <rdfs:comment>The process of establishing the extent to which a learner has attained particular knowledge, skills and competences against criteria such as learning outcomes or standards of competence.</rdfs:comment>
+        <rdfs:label>Learning Assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#LearningEntitlement -->
+
+    <owl:Class rdf:about="http://example.org/def/base#LearningEntitlement">
+        <rdfs:comment>A right, e.g., to practice a profession, take advantage of a learning opportunity or join an organisation, as a result of the acquisition of knowledge, skills, responsibility and/or autonomy.</rdfs:comment>
+        <rdfs:label>Learning Entitlement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Lecture -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Lecture">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/http./example.org/def/base#LearningActivity"/>
+        <rdfs:comment>A type of Learning Activity</rdfs:comment>
+        <rdfs:label>Lecture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#OnCampus -->
+
+    <owl:Class rdf:about="http://example.org/def/base#OnCampus">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#DeliveryMode"/>
+        <rdfs:comment>A presencial delivery mode of a subject</rdfs:comment>
+        <rdfs:label>On- Campus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Online -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Online">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#DeliveryMode"/>
+        <rdfs:comment>A online delivery mode of a subject</rdfs:comment>
+        <rdfs:label>Online</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Optional -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Optional">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#DeliveryMode"/>
+        <rdfs:comment>A kind of Delivery Mode that means that a subject is not compulsoty in the program</rdfs:comment>
+        <rdfs:label>Optional</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Organization -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Organization">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#hasMember"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/def/base#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Definition of Organization</rdfs:comment>
+        <rdfs:label>Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#ProfessionalRole -->
+
+    <owl:Class rdf:about="http://example.org/def/base#ProfessionalRole">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#roleAt"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/def/base#Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A role not related to the Master´s Degree</rdfs:comment>
+        <rdfs:label>Professional Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Professor -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Professor">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#AcademicRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#teaches"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/def/base#Subject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://example.org/def/base#Student"/>
+        <rdfs:comment>An Academic role that teaches a subject</rdfs:comment>
+        <rdfs:label>Professor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Program -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Program">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#KnowledgeGrouping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#entryRequirement"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/def/base#LearningEntitlement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A structured, coordinated set of courses and activities leading to specific learning outcomes, often culminating in a degree</rdfs:comment>
+        <rdfs:label>Program</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#ResearchGroup -->
+
+    <owl:Class rdf:about="http://example.org/def/base#ResearchGroup">
+        <owl:equivalentClass rdf:resource="http://purl.org/cerif/frapo/ResearchGroup"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#AcademicEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#isSubpartOf"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/def/base#Department"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A group of people, usually within a university department or a research institute, and typically under a single group leader, dedicated to working together to undertake research on one or more topics. May also be called a research unit.</rdfs:comment>
+        <rdfs:label>Research Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Role -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Role">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#startDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#endDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The function a person does in a group, project or organization</rdfs:comment>
+        <rdfs:label>Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#SelfStudy -->
+
+    <owl:Class rdf:about="http://example.org/def/base#SelfStudy">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/http./example.org/def/base#LearningActivity"/>
+        <rdfs:comment>A Learning Activity</rdfs:comment>
+        <rdfs:label>Self-study</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Student -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Student">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#AcademicRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#isEnrolledIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/def/base#KnowledgeGrouping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A person that has an Academic Role and its enrolled in a Program</rdfs:comment>
+        <rdfs:label>Student</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Subject -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Subject">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#KnowledgeGrouping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#covers"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/def/base#LearningAchievement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#hasMode"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/def/base#DeliveryMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#isEvaluatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/def/base#KnowledgeGrouping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#isEvaluatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/def/http./example.org/def/base#LearningActivity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#credits"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/cerif/frapo/hasCode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Knowledge Grouping that groups a specific Learning Entitlement</rdfs:comment>
+        <rdfs:label>Subject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#University -->
+
+    <owl:Class rdf:about="http://example.org/def/base#University">
+        <owl:equivalentClass rdf:resource="http://purl.org/cerif/frapo/University"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#AcademicEntity"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#Internal"/>
+        <rdfs:comment>A university at which higher education and research is conducted.</rdfs:comment>
+        <rdfs:label>University</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/base#Year -->
+
+    <owl:Class rdf:about="http://example.org/def/base#Year">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#KnowledgeGrouping"/>
+        <rdfs:comment>A knowledge group that includes what is learn in a year (first, second)</rdfs:comment>
+        <rdfs:label>Year</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/def/http./example.org/def/base#LearningActivity -->
+
+    <owl:Class rdf:about="http://example.org/def/http./example.org/def/base#LearningActivity">
+        <rdfs:comment>Any action, in process or completed, which may lead to the acquisition of knowledge, skills or responsibility and autonomy.</rdfs:comment>
+        <rdfs:label>Learning Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/cerif/frapo/Department -->
+
+    <owl:Class rdf:about="http://purl.org/cerif/frapo/Department">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/cerif/frapo"/>
+        <rdfs:label>Department</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/cerif/frapo/Faculty -->
+
+    <owl:Class rdf:about="http://purl.org/cerif/frapo/Faculty">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/cerif/frapo/"/>
+        <rdfs:label>Faculty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/cerif/frapo/ResearchGroup -->
+
+    <owl:Class rdf:about="http://purl.org/cerif/frapo/ResearchGroup">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/cerif/frapo/"/>
+        <rdfs:label>Research Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/cerif/frapo/ResearchInstitute -->
+
+    <owl:Class rdf:about="http://purl.org/cerif/frapo/ResearchInstitute">
+        <rdfs:subClassOf rdf:resource="http://example.org/def/base#External"/>
+        <rdfs:comment>An organization primarily dedicated to undertaking research, that might be part of a university or of a commercial company, or might be independently funded by a research funding agency.</rdfs:comment>
+        <rdfs:label>Research Institute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/cerif/frapo/University -->
+
+    <owl:Class rdf:about="http://purl.org/cerif/frapo/University">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/cerif/frapo/"/>
+        <rdfs:label>University</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization">
+        <rdfs:isDefinedBy rdf:resource="http:/xmlns.com/foaf/0.1"/>
+        <rdfs:label>Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <owl:equivalentClass rdf:resource="https://example.org/def/base#Person"/>
+        <rdfs:isDefinedBy rdf:resource="http:/xmlns.com/foaf/0.1"/>
+        <rdfs:label>Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/def/base#LearningAchievement -->
+
+    <owl:Class rdf:about="https://example.org/def/base#LearningAchievement">
+        <rdfs:comment>The acquisition of a set of knowledge and/or skills used with responsibility and autonomy.</rdfs:comment>
+        <rdfs:label>Learning Achievement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/def/base#Person -->
+
+    <owl:Class rdf:about="https://example.org/def/base#Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#hasRole"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/def/base#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/def/base#isMemberOf"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/def/base#Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/cerif/frapo/isEmployedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/def/base#Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A human being regarded as an individual.</rdfs:comment>
+        <rdfs:label>Person</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
